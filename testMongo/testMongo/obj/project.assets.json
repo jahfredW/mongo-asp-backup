@@ -12162,19 +12162,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-<<<<<<< HEAD
       "projectUniqueName": "C:\\Salles\\mongo-asp-backup\\testMongo\\testMongo\\testMongo.csproj",
       "projectName": "testMongo",
       "projectPath": "C:\\Salles\\mongo-asp-backup\\testMongo\\testMongo\\testMongo.csproj",
       "packagesPath": "C:\\Users\\59011-82-07\\.nuget\\packages\\",
       "outputPath": "C:\\Salles\\mongo-asp-backup\\testMongo\\testMongo\\obj\\",
-=======
-      "projectUniqueName": "C:\\Mongo\\mongo-backup\\testMongo\\testMongo\\testMongo.csproj",
-      "projectName": "testMongo",
-      "projectPath": "C:\\Mongo\\mongo-backup\\testMongo\\testMongo\\testMongo.csproj",
-      "packagesPath": "C:\\Users\\59011-82-08\\.nuget\\packages\\",
-      "outputPath": "C:\\Mongo\\mongo-backup\\testMongo\\testMongo\\obj\\",
->>>>>>> aff1e6bf6d6174e24580a8ff92f7e33ff19d8b8b
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

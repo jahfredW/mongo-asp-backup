@@ -42,9 +42,5 @@
 		<PackageReference Include="MySql.EntityFrameworkCore" Version="7.0.10" />
 	</ItemGroup>
 
-	<ItemGroup>
-	  <Folder Include="Profiles\" />
-	</ItemGroup>
-
 
 </Project>
