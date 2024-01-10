@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Mongo\\TravailllerEsclave\\testMongo\\testMongo\\testMongo.csproj": {}
+    "C:\\Salles\\mongo-asp-backup\\testMongo\\testMongo\\testMongo.csproj": {}
   },
   "projects": {
-    "C:\\Mongo\\TravailllerEsclave\\testMongo\\testMongo\\testMongo.csproj": {
+    "C:\\Salles\\mongo-asp-backup\\testMongo\\testMongo\\testMongo.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Mongo\\TravailllerEsclave\\testMongo\\testMongo\\testMongo.csproj",
+        "projectUniqueName": "C:\\Salles\\mongo-asp-backup\\testMongo\\testMongo\\testMongo.csproj",
         "projectName": "testMongo",
-        "projectPath": "C:\\Mongo\\TravailllerEsclave\\testMongo\\testMongo\\testMongo.csproj",
-        "packagesPath": "C:\\Users\\59011-82-08\\.nuget\\packages\\",
-        "outputPath": "C:\\Mongo\\TravailllerEsclave\\testMongo\\testMongo\\obj\\",
+        "projectPath": "C:\\Salles\\mongo-asp-backup\\testMongo\\testMongo\\testMongo.csproj",
+        "packagesPath": "C:\\Users\\59011-82-07\\.nuget\\packages\\",
+        "outputPath": "C:\\Salles\\mongo-asp-backup\\testMongo\\testMongo\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\59011-82-08\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\59011-82-07\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -26,6 +26,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -126,7 +127,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.403\\RuntimeIdentifierGraph.json"
         }
       }
     }
