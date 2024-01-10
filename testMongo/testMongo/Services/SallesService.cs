@@ -33,7 +33,7 @@ namespace testMongo.Services
         public async Task UpdateAsync(int id, Salle updatedSalle) =>
             await _SallesCollection.ReplaceOneAsync(x => x.Id == id, updatedSalle);
 
-        //public async Task RemoveAsync(string id) =>
-        //    await _SallesCollection.DeleteOneAsync(x => x.Id == id);
+        public async Task RemoveAsync(int id) =>
+            await _SallesCollection.DeleteOneAsync(x => x.Id == id);
     }
 }
