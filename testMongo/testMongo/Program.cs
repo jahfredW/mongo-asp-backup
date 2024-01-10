@@ -33,6 +33,8 @@ namespace testMongo
 
             builder.Services.AddTransient<SallesService>();
 
+            builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
+
             // Add services to the container.
             //builder.Services.AddDbContext<ApiDbContext>(options => options.UseMySQL(builder.Configuration.GetConnectionString("Default")));
             builder.Services.AddControllers();

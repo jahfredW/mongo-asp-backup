@@ -1,12 +1,10 @@
-﻿using MongoDB.Bson.Serialization.Attributes;
+﻿
 using testMongo.Models;
 
 namespace testMongo.Dto
 {
     public class SallesDto
     {
-        [BsonElement("_id")]
-        //[BsonRepresentation(BsonType.ObjectId)]
         public int Id { get; set; }
 
         public string Nom { get; set; }
