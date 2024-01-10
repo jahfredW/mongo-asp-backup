@@ -53,15 +53,34 @@ public class SallesController : ControllerBase
     public async Task<ActionResult> UpdateSalle(int id, Salle entity)
     {
         var SalleFromRepo = await _SallesService.GetAsync(id);
+
         if (SalleFromRepo == null)
         {
             return NotFound();
         }
 
+        entity.Id = SalleFromRepo.Id;
+
+        SalleFromRepo.Nom = entity.Nom;
+
         await _SallesService.UpdateAsync(id, SalleFromRepo);
         return NoContent();
     }
 
+    [HttpDelete("{id}")]
+    public async Task<IActionResult> Delete(int id)
+    {
+        var book = await _SallesService.GetAsync(id);
+
+        if (book is null)
+        {
+            return NotFound();
+        }
+
+        await _SallesService.RemoveAsync(id);
+
+        return NoContent();
+    }
     //[HttpPatch("{id}")]
     //public ActionResult PartialSalleUpdate(int id, [FromBody] JsonPatchDocument<Salle> patchDoc)
     //{
