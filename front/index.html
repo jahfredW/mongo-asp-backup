@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <main>
+    <div class="filtre">
+        <div class="filtreOpen">
+            <h3>Style de musique</h3>
+            <form id="filtreForm" class="filtreForm">
+                <label>
+                    <input type="checkbox" name="pop" value="pop"> Pop
+                </label>
+                <label>
+                    <input type="checkbox" name="rock" value="rock"> Rock
+                </label>
+                <label>
+                    <input type="checkbox" name="hip-hop" value="hip-hop"> Hip Hop
+                </label>
+                <label>
+                    <input type="checkbox" name="jazz" value="jazz"> Jazz
+                </label>
+                <label>
+                    <input type="checkbox" name="classical" value="classical"> Classical
+                </label>
+            </form>
+        </div>
+        <p class="balise"><</p>
+    </div>
+
+    <div class="centre">
+        <input type="text" placeholder="Rechercher Salle" class="barreRecherche">
+    
+    <div class="listeSalle"></div>
+</div>
+</main>
+<template id="template">
+    <div class="salle">
+        <h3 id="nom">testdassa</h3>
+        <p id="ville">Lille</p>
+        <p id="capacite">3000 places</p>
+    </div>
+</template>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
