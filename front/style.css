@@ -16,6 +16,7 @@ main {
 .filtre {
     display: flex;
     flex-wrap: wrap;
+    position:fixed;
 }
 
 .filtreOpen {
@@ -56,12 +57,13 @@ h3 {
     display: flex;
     flex-direction: column;
     align-items: center; /* Centrer horizontalement */
+    margin: auto; 
 }
 
 .barreRecherche {
     border-radius: 90px;
     width: 20vw;
-    height: 3vh;
+    height: 4vh;
     margin: 3vh 0;
 }
 
