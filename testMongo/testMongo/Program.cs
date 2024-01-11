@@ -1,8 +1,4 @@
-
-using Microsoft.EntityFrameworkCore;
 using testMongo.Models;
-using MongoDB.Driver;
-using MongoDB.Bson;
 using testMongo.Services;
 
 namespace testMongo
