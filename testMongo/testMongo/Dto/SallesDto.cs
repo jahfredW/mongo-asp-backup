@@ -30,8 +30,6 @@ namespace testMongo.Dto
 
         public AdressesDto Adresse { get; set; }
 
-        public LocalisationsDto Localisation { get; set; }
-
         public List<string> Styles { get; set; }
 
         public List<AvisDto> AvisListe { get; set; }
