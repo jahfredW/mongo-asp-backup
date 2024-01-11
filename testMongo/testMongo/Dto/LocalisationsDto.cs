@@ -1,6 +1,4 @@
-﻿using MongoDB.Bson.Serialization.Attributes;
-
-namespace testMongo.Dto
+﻿namespace testMongo.Dto
 {
     public class LocalisationsDto
     {

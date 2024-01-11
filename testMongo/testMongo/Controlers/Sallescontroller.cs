@@ -1,9 +1,6 @@
 ﻿using AutoMapper;
-using Microsoft.AspNetCore.JsonPatch;
 using Microsoft.AspNetCore.Mvc;
 using testMongo.Services;
-//using testMongo.Models.DTO;
-//using testMongo.Models.Data;
 using testMongo.Models;
 using testMongo.Dto;
 
@@ -83,28 +80,6 @@ public class SallesController : ControllerBase
 
         return NoContent();
     }
-    //[HttpPatch("{id}")]
-    //public ActionResult PartialSalleUpdate(int id, [FromBody] JsonPatchDocument<Salle> patchDoc)
-    //{
-    //    var SalleFromRepo = _SallesService.GetSalleById(id);
 
-    //    if (SalleFromRepo == null)
-    //    {
-    //        return NotFound();
-    //    }
-
-    //    var SalleToPatch = _mapper.Map<Salle>(SalleFromRepo);
-
-    //    patchDoc.ApplyTo(SalleToPatch, ModelState);
-    //    if (!TryValidateModel(SalleToPatch))
-    //    {
-    //        return ValidationProblem();
-    //    }
-
-    //    _mapper.Map(SalleToPatch, SalleFromRepo);
-    //    _SallesService.UpdateSalle(SalleFromRepo);
-
-    //    return NoContent();
-    //}
 }
 

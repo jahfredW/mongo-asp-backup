@@ -1,6 +1,4 @@
 ﻿
-using testMongo.Models;
-
 namespace testMongo.Dto
 {
     public class SallesDto

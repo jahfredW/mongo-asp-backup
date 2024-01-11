@@ -11,19 +11,7 @@ namespace testMongo
     {
         public static void Main(string[] args)
         {
-            //// Connexion à la base de données MongoDB en local
-            //var client = new MongoClient("mongodb://localhost:27017");
-            //var database = client.GetDatabase("salles");
-            //var collection = database.GetCollection<BsonDocument>("salles");
 
-            //// Récupération de toutes les salles
-            //var salles = collection.Find(Builders<BsonDocument>.Filter.Empty).ToList();
-
-            //// Affichage des salles
-            //foreach (var salle in salles)
-            //{
-            //    Console.WriteLine(salle);
-            //}
 
             var builder = WebApplication.CreateBuilder(args);
 
@@ -33,7 +21,12 @@ namespace testMongo
             builder.Services.Configure<SalleDatabaseSettings>(
                 builder.Configuration.GetSection("SallesDatabase"));
 
+            builder.Services.Configure<SallesDatabaseStyleSettings>(
+        builder.Configuration.GetSection("SallesDatabaseStyle"));
+
             builder.Services.AddTransient<SallesService>();
+
+            builder.Services.AddTransient<StylesService>();
 
             builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 
