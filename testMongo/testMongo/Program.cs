@@ -27,6 +27,8 @@ namespace testMongo
 
             var builder = WebApplication.CreateBuilder(args);
 
+            var MyAllowSpecificOrigins = "_myAllowSpecificOrigins";
+
             // Add services to the container.
             builder.Services.Configure<SalleDatabaseSettings>(
                 builder.Configuration.GetSection("SallesDatabase"));
@@ -34,6 +36,16 @@ namespace testMongo
             builder.Services.AddTransient<SallesService>();
 
             builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
+
+            builder.Services.AddCors(options =>
+            {
+                options.AddPolicy(name: MyAllowSpecificOrigins,
+                                  policy =>
+                                  {
+                                      policy.WithOrigins("http://127.0.0.1:5500"
+                                                          );
+                                  });
+            });
 
             // Add services to the container.
             //builder.Services.AddDbContext<ApiDbContext>(options => options.UseMySQL(builder.Configuration.GetConnectionString("Default")));
@@ -44,6 +56,8 @@ namespace testMongo
             builder.Services.AddControllers().AddNewtonsoftJson();
 
             var app = builder.Build();
+
+            app.UseCors(MyAllowSpecificOrigins);
 
             // Configure the HTTP request pipeline.
             if (app.Environment.IsDevelopment())

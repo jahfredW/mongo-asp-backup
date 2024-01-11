@@ -11,9 +11,9 @@
           var nomSalle = clone.querySelector('h3');
           var villeSalle = clone.querySelector('#ville');
           var capaciteSalle = clone.querySelector('#capacite');
-          nomSalle.textContent = user.name;
-          villeSalle.textContent = user.address.city;
-          capaciteSalle.textContent = user.id;
+          nomSalle.textContent = user.nom;
+          villeSalle.textContent = user.adresse.ville;
+          capaciteSalle.textContent = user.capacite;
           liste.appendChild(clone);
       });
   }
@@ -32,9 +32,12 @@
         salle.style.display = correspondNom || correspondVille || correspondCapacite ? 'block' : 'none';
     });
 }
-fetch('https://jsonplaceholder.typicode.com/users')
+
+
+fetch('https://localhost:44314/api/Salles')
 .then(res => res.json())
 .then(users => {
+    console.log(users);
     createAndAppendElements(users);
     barreRecherche.addEventListener('input', filterSalles);
 
