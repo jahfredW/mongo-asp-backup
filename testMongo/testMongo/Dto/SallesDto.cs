@@ -1,6 +1,4 @@
 ﻿
-using testMongo.Models;
-
 namespace testMongo.Dto
 {
     public class SallesDto
@@ -29,8 +27,6 @@ namespace testMongo.Dto
         public string Nom { get; set; }
 
         public AdressesDto Adresse { get; set; }
-
-        //public LocalisationsDto Localisation { get; set; }
 
         public List<string> Styles { get; set; }
 

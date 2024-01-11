@@ -1,5 +1,4 @@
-﻿using MongoDB.Bson.Serialization.Attributes;
-using testMongo.Models;
+﻿using testMongo.Models;
 
 namespace testMongo.Dto
 {
