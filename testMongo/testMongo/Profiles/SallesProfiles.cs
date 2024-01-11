@@ -10,6 +10,8 @@ namespace testMongo.Profiles
         {
             CreateMap<Salle,SallesDto>();
             CreateMap<SallesDto, Salle>();
+            CreateMap<Salle, SallesDtoOut>();
+            CreateMap<SallesDtoOut, Salle>();
         }
     }
 }

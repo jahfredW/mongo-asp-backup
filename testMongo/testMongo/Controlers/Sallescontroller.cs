@@ -5,6 +5,7 @@ using testMongo.Services;
 //using testMongo.Models.DTO;
 //using testMongo.Models.Data;
 using testMongo.Models;
+using testMongo.Dto;
 
 namespace testMongo.Controllers;
 
@@ -22,10 +23,11 @@ public class SallesController : ControllerBase
     }
 
     [HttpGet]
-    public  async Task<ActionResult<IEnumerable<Salle>>> Get()
+    public  async Task<ActionResult<IEnumerable<SallesDtoOut>>> Get()
     {
         var listeSalles =  await _SallesService.GetAsync();
-        return Ok(listeSalles);
+        var  salles = _mapper.Map<IEnumerable<SallesDtoOut>>(listeSalles);
+        return Ok(salles);
     }
 
     [HttpGet("{id}", Name = "GetSalleById")]
