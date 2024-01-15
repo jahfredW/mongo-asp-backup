@@ -24,6 +24,7 @@ btnFiltre.addEventListener('click', fermetureStyleFlitre);
 fetch('https://localhost:44314/api/Styles')
     .then(res => res.json())
     .then(styles => {
+
         styles.styles.forEach(style => {
             // Créer un élément de formulaire pour chaque style
             creerElementFormulaireAvecStyle(style);
@@ -95,16 +96,18 @@ function filtre(salles) {
 // Fonction de création et ajout des éléments au DOM à partir des données des salles
 function creerElementSalles(salles) {
     salles.forEach(salle => {
-        var clone = document.importNode(templateListe.content, true);
-        var nomSalle = clone.querySelector('h3');
-        var villeSalle = clone.querySelector('#ville');
-        var capaciteSalle = clone.querySelector('#capacite');
-        var idSalle = clone.querySelector('#idSalle');
+        let clone = document.importNode(templateListe.content, true);
+        let nomSalle = clone.querySelector('h3');
+        let villeSalle = clone.querySelector('#ville');
+        let capaciteSalle = clone.querySelector('#capacite');
+        let idSalle = clone.querySelector('#idSalle');
+
         // Mise à jour des données de la salle dans le template
         nomSalle.textContent = salle.nom;
         villeSalle.textContent = salle.adresse.ville;
         capaciteSalle.textContent = salle.capacite;
         idSalle.textContent = salle.id;
+        
         // Ajout du clone à la liste
         liste.insertBefore(clone, liste.firstChild);
     });
@@ -113,9 +116,9 @@ function creerElementSalles(salles) {
 // Fonction de création d'élément de formulaire pour chaque style
 function creerElementFormulaireAvecStyle(style) {
     // Clonage du modèle pour chaque style
-    var clone = document.importNode(templateFiltre.content, true);
-    var inputStyle = clone.querySelector('input');
-    var labelStyle = clone.querySelector('label');
+    let clone = document.importNode(templateFiltre.content, true);
+    let inputStyle = clone.querySelector('input');
+    let labelStyle = clone.querySelector('label');
 
     // Mise à jour des attributs et du texte avec les données du style
     inputStyle.name = style;
@@ -156,7 +159,7 @@ function fermetureStyleFlitre() {
 function createAllPointsInMap(salles) {
     salles.forEach(salle => {
         let salleCoordinates = [salle.adresse.localisation.coordinates[0], salle.adresse.localisation.coordinates[1]];
-        L.marker(salleCoordinates).addTo(markersLayer);
+        L.marker(salleCoordinates).bindPopup(salle.nom+"<br>"+salle.adresse.ville).openPopup().addTo(markersLayer);
         
     });
 }
@@ -167,47 +170,47 @@ function effacerMarqueurs() {
     }
 }
 
-  const data = {
+//   const data = {
     
-        "id": 50,
-        "nom": "string",
-        "adresse": {
-          "numero": 0,
-          "voie": "string",
-          "codePostal": "string",
-          "ville": "string",
-          "localisation": {
-            "type": "string",
-            "coordinates": [
-              0
-            ]
-          }
-        },
-        "localisation": {
-          "type": "string",
-          "coordinates": [
-            0
-          ]
-        },
-        "styles": [
-          "string"
-        ],
-        "avisListe": [
-          {
-            "date": "2024-01-15T10:06:09.258Z",
-            "note": 0
-          }
-        ],
-        "capacite": 0,
-        "smac": true
+//         "id": 50,
+//         "nom": "string",
+//         "adresse": {
+//           "numero": 0,
+//           "voie": "string",
+//           "codePostal": "string",
+//           "ville": "string",
+//           "localisation": {
+//             "type": "string",
+//             "coordinates": [
+//               0
+//             ]
+//           }
+//         },
+//         "localisation": {
+//           "type": "string",
+//           "coordinates": [
+//             0
+//           ]
+//         },
+//         "styles": [
+//           "string"
+//         ],
+//         "avisListe": [
+//           {
+//             "date": "2024-01-15T10:06:09.258Z",
+//             "note": 0
+//           }
+//         ],
+//         "capacite": 0,
+//         "smac": true
       
-  };
-  const options = {
-    method: 'DELETE', 
-    headers: {
-      'Content-Type': 'application/json' 
-    },
-    body: JSON.stringify(data) 
-  };
-    fetch('https://localhost:44314/api/Salles/'+15, options)
-  .catch(error => console.error('Erreur :', error));
+//   };
+//   const options = {
+//     method: 'DELETE', 
+//     headers: {
+//       'Content-Type': 'application/json' 
+//     },
+//     body: JSON.stringify(data) 
+//   };
+//     fetch('https://localhost:44314/api/Salles/'+15, options)
+//   .catch(error => console.error('Erreur :', error));

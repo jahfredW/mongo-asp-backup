@@ -33,7 +33,7 @@
 fetch('https://localhost:44314/api/Salles/'+id)
 .then(res => res.json())
 .then(user => {
-    console.log(user);
+
     createPageSalle(user);
 
 })
