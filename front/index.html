@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
-
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
 </head>
 
 <body>
@@ -23,8 +24,11 @@
 
     <div class="centre">
         <input type="text" placeholder="Rechercher Salle" class="barreRecherche">
-    
-    <div class="listeSalle"></div>
+        <div class="listeSalle"></div>
+    </div>
+<div class="carte">
+    <h3>Carte interactive</h3>
+    <div id="map"></div>
 </div>
 </main>
 <template id="template">
@@ -32,7 +36,7 @@
         <h3 id="nom">testdassa</h3>
         <p id="ville">Lille</p>
         <p id="capacite">3000 places</p>
-        <p class="idSalle" hidden >1</p>
+        <p id="idSalle" hidden >1</p>
     </div>
 </template>
 <template id="templateFiltre">
