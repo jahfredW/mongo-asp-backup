@@ -31,8 +31,10 @@ namespace testMongo
                 options.AddPolicy(name: MyAllowSpecificOrigins,
                                   policy =>
                                   {
-                                      policy.WithOrigins("http://127.0.0.1:5500"
-                                                          );
+                                      policy.WithOrigins("http://127.0.0.1:5500" )
+                                                            .AllowAnyMethod()  // Autoriser toutes les méthodes (GET, POST, PUT, etc.)
+                                                            .AllowAnyHeader()  // Autoriser tous les en-têtes
+                                                            .AllowCredentials(); // Autoriser les informations d'identification dans les requêtes CORS (si nécessaire);
                                   });
             });
 

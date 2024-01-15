@@ -106,7 +106,7 @@ function creerElementSalles(salles) {
         capaciteSalle.textContent = salle.capacite;
         idSalle.textContent = salle.id;
         // Ajout du clone à la liste
-        liste.appendChild(clone);
+        liste.insertBefore(clone, liste.firstChild);
     });
 }
 
@@ -157,6 +157,7 @@ function createAllPointsInMap(salles) {
     salles.forEach(salle => {
         let salleCoordinates = [salle.adresse.localisation.coordinates[0], salle.adresse.localisation.coordinates[1]];
         L.marker(salleCoordinates).addTo(markersLayer);
+        
     });
 }
 
@@ -165,3 +166,48 @@ function effacerMarqueurs() {
         markersLayer.clearLayers();
     }
 }
+
+  const data = {
+    
+        "id": 50,
+        "nom": "string",
+        "adresse": {
+          "numero": 0,
+          "voie": "string",
+          "codePostal": "string",
+          "ville": "string",
+          "localisation": {
+            "type": "string",
+            "coordinates": [
+              0
+            ]
+          }
+        },
+        "localisation": {
+          "type": "string",
+          "coordinates": [
+            0
+          ]
+        },
+        "styles": [
+          "string"
+        ],
+        "avisListe": [
+          {
+            "date": "2024-01-15T10:06:09.258Z",
+            "note": 0
+          }
+        ],
+        "capacite": 0,
+        "smac": true
+      
+  };
+  const options = {
+    method: 'DELETE', 
+    headers: {
+      'Content-Type': 'application/json' 
+    },
+    body: JSON.stringify(data) 
+  };
+    fetch('https://localhost:44314/api/Salles/'+15, options)
+  .catch(error => console.error('Erreur :', error));

@@ -74,7 +74,8 @@ h3 {
     flex-wrap: wrap;
 }
 
-.salle {
+
+.salle{
     background-color: rgb(255, 182, 182);
     width: 10vw;
     height: 20vh;
@@ -85,6 +86,17 @@ h3 {
     align-items: center;
     border-radius: 20px;
     margin: 2vw;
+}
+.btnAdd{
+    padding: 0;
+    font-size: 18vh;
+    background-color: rgb(255, 182, 182);
+    width: 10vw;
+    height: 20vh;
+    border-radius: 20px;
+    margin: 2vw;
+    cursor: pointer;
+
 }
 
 .carte {
