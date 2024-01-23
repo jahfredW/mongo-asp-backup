@@ -58,11 +58,7 @@ public class SallesController : ControllerBase
             return NotFound();
         }
 
-        entity.Id = SalleFromRepo.Id;
-
-        SalleFromRepo.Nom = entity.Nom;
-
-        await _SallesService.UpdateAsync(id, SalleFromRepo);
+        await _SallesService.UpdateAsync(id, entity);
         return NoContent();
     }
 
