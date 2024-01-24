@@ -6,6 +6,10 @@
 
 body {
     font-family: Arial, sans-serif;
+    background: rgb(2,0,36);
+    background: linear-gradient(180deg, rgba(9,86,121,1) 35%, rgba(0,212,255,1) 100%);
+
+
 }
 
 main {
@@ -13,9 +17,10 @@ main {
     flex-wrap: wrap;
 }
 
-.filtre {
+.filtre,.carte {
     display: flex;
     flex-wrap: wrap;
+    position: fixed;
 }
 
 .filtreOpen {
@@ -38,10 +43,7 @@ h3 {
     background: lightsteelblue;
     height: 4vh;
     width: 3vh;
-}
-
-.balise:hover {
-    cursor: pointer;
+    cursor: pointer; /* Ajout de la propriété cursor pour indiquer que c'est cliquable */
 }
 
 .filtreForm {
@@ -52,17 +54,19 @@ h3 {
 }
 
 .centre {
-    width: 75%;
+    width: 65%;
     display: flex;
     flex-direction: column;
-    align-items: center; /* Centrer horizontalement */
+    align-items: center;
+    margin: auto;
 }
 
 .barreRecherche {
     border-radius: 90px;
     width: 20vw;
-    height: 3vh;
+    height: 4vh;
     margin: 3vh 0;
+    background-color: rgb(255, 182, 182);
 }
 
 .listeSalle {
@@ -70,15 +74,46 @@ h3 {
     flex-wrap: wrap;
 }
 
-.salle {
+
+.salle{
     background-color: rgb(255, 182, 182);
     width: 10vw;
     height: 20vh;
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 2vh;
     padding-top: 5vh;
     align-items: center;
     border-radius: 20px;
     margin: 2vw;
+}
+.btnAdd{
+    padding: 0;
+    font-size: 18vh;
+    background-color: rgb(255, 182, 182);
+    width: 10vw;
+    height: 20vh;
+    border-radius: 20px;
+    margin: 2vw;
+    cursor: pointer;
+
+}
+
+.carte {
+    display: flex;
+    flex-wrap: wrap;
+    width: 20vw;
+    height: 50vh;
+    color: #13293D;
+    background: lightsteelblue;
+    font-size: large;
+    padding: 2vh;
+    right: 0;
+    margin-top: 25vh;
+    margin-right: 3vw;
+}
+
+#map {
+    width: 100%;
+    height: 90%;
 }
